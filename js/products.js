@@ -22,5 +22,13 @@ const products = [
         image: 'images/product3.jpg',
         description: 'Noise-cancelling wireless headphones with superior sound quality.',
         features: ['Noise cancellation', '20 hours battery life', 'Comfortable fit']
+    },
+    {
+        id: 4,
+        name: 'Mouse',
+        price: 120.00,
+        image: 'images/product4.jpg',
+        description: 'Good Mouse',
+        features: ['12.000D DPI', '40', 'Comfortable fit']
     }
 ];
