@@ -1,0 +1,41 @@
+/* Styles for product details page */
+.product-details {
+    padding: 20px;
+    background-color: #fff;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.product-details img {
+    max-width: 100%;
+    height: auto;
+}
+
+.product-details h1 {
+    font-size: 36px;
+    margin: 20px 0;
+}
+
+.product-details p {
+    font-size: 18px;
+    color: #666;
+}
+
+.product-details ul {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+.product-details button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.product-details button:hover {
+    background-color: #555;
+}
