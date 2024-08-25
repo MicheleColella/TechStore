@@ -54,6 +54,7 @@ a {
 
 .navbar ul li a {
     font-size: 14px;
+    color: #333; /* Colore degli elementi della navbar */
 }
 
 /* Hero section */
@@ -203,13 +204,28 @@ footer {
     color: #fff;
 }
 
-#dropdown-menu .close-btn {
-    position: absolute;
-    top: 20px;
-    right: 20px;
+/* Modifica il colore della X per abbinarlo agli elementi della navbar */
+#dropdown-menu .close-menu {
+    color: #fff; /* Colore della navbar */
     font-size: 24px;
     cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 60px; /* Distanza dal bordo destro del menu */
+    background: none; /* Rimuove il background del bottone */
+    border: none; /* Rimuove il bordo del bottone */
+    padding: 0; /* Rimuove il padding del bottone */
+    line-height: 1; /* Assicura che la X sia centrata verticalmente */
+    display: flex;
+    align-items: center; /* Centra verticalmente la X */
+    justify-content: center; /* Centra orizzontalmente la X */
 }
+
+/* Assicurati che non ci siano stili non desiderati */
+#dropdown-menu .close-menu:focus {
+    outline: none; /* Rimuove il contorno del bottone quando ha il focus */
+}
+
 
 /* Responsive */
 @media screen and (max-width: 768px) {
@@ -218,7 +234,7 @@ footer {
         flex-direction: column;
         align-items: center;
         position: absolute;
-        top: 60px; /* Height of the header */
+        top: 60px; /* Altezza dell'header */
         right: 0;
         background-color: #fff;
         width: 100%;
