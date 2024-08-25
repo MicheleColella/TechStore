@@ -1,4 +1,11 @@
 /* Global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -6,6 +13,9 @@ body {
     background-color: #f5f5f5;
     color: #333;
     padding-top: 60px; /* Altezza dell'header fisso */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Per il footer sempre in fondo */
 }
 
 a {
@@ -103,15 +113,39 @@ a {
     color: #333;
 }
 
+/* Categoria prodotti con scroll orizzontale */
+.scroll-view {
+    display: flex; /* Organizza i prodotti in fila */
+    overflow-x: auto; /* Abilita lo scorrimento orizzontale */
+    overflow-y: hidden; /* Disabilita lo scorrimento verticale */
+    padding: 20px 0;
+    gap: 20px; /* Spaziatura tra i prodotti */
+}
+
+.scroll-view .product-card {
+    flex: 0 0 auto; /* Impedisce ai prodotti di ridimensionarsi */
+    width: 200px; /* Dimensione fissa per ciascun prodotto */
+    margin-right: 20px; /* Aggiunge spazio tra le card */
+}
+
+.scroll-view {
+    -webkit-overflow-scrolling: touch; /* Per lo scroll fluido su dispositivi touch */
+    scrollbar-width: none; /* Firefox */
+}
+
+.scroll-view::-webkit-scrollbar {
+    display: none; /* Chrome, Safari e Edge */
+}
+
+
 /* Footer */
 footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+    flex-shrink: 0;
     background-color: white;
     text-align: center;
     padding: 10px;
     border-top: 1px solid #ddd;
+    width: 100%;
 }
 
 /* Menu toggle per schermi piccoli */

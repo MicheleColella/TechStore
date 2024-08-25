@@ -1,48 +1,80 @@
-document.addEventListener('DOMContentLoaded', () => {
-    // Caricamento dei prodotti nella pagina principale
-    const productList = document.getElementById('product-list');
-    products.forEach(product => {
-        const productCard = document.createElement('div');
-        productCard.classList.add('product-card');
-        productCard.innerHTML = `
-            <img src="${product.image}" alt="${product.name}">
-            <h2>${product.name}</h2>
-            <p>$${product.price.toFixed(2)}</p>
-            <a href="product.html?id=${product.id}" class="view-details">View Details</a>
-        `;
-        productList.appendChild(productCard);
-    });
+// Funzione per selezionare 3 prodotti casuali
+function getRandomProducts(products, count = 3) {
+    const shuffled = products.sort(() => 0.5 - Math.random());
+    return shuffled.slice(0, count);
+}
 
-    // Caricamento dettagli del prodotto selezionato
-    if (document.getElementById('product-details')) {
-        const urlParams = new URLSearchParams(window.location.search);
-        const productId = parseInt(urlParams.get('id'), 10);
-        const product = products.find(p => p.id === productId);
-        
-        if (product) {
-            const productDetails = document.getElementById('product-details');
-            productDetails.innerHTML = `
+// Caricamento dei 3 prodotti casuali nella pagina principale
+document.addEventListener('DOMContentLoaded', () => {
+    console.log("DOM content loaded");
+    
+    const productList = document.getElementById('product-list');
+    
+    if (productList) {
+        console.log("Product list container found");
+
+        const randomProducts = getRandomProducts(products); // Prende 3 prodotti casuali
+        randomProducts.forEach(product => {
+            const productCard = document.createElement('div');
+            productCard.classList.add('product-card');
+            productCard.innerHTML = `
                 <img src="${product.image}" alt="${product.name}">
-                <h1>${product.name}</h1>
+                <h2>${product.name}</h2>
                 <p>$${product.price.toFixed(2)}</p>
-                <p>${product.description}</p>
-                <ul>
-                    ${product.features.map(feature => `<li>${feature}</li>`).join('')}
-                </ul>
-                <button id="add-to-cart">Add to Cart</button>
+                <a href="product.html?id=${product.id}" class="view-details">View Details</a>
             `;
-            
-            // Gestione del pulsante "Add to Cart"
-            document.getElementById('add-to-cart').addEventListener('click', () => {
-                addToCart(product.name);
-            });
-        }
+            productList.appendChild(productCard);
+        });
+    } else {
+        console.error("Product list container not found");
     }
 
-    // Gestione del menu hamburger per schermi piccoli
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navLinks = document.querySelector('.nav-links');
-    menuToggle.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-    });
+    // Chiamata per visualizzare i prodotti di una categoria casuale
+    const randomCategory = getRandomCategory();
+    console.log("Random category selected: " + randomCategory);
+    
+    const categoryNameElement = document.getElementById('category-name');
+    if (categoryNameElement) {
+        categoryNameElement.textContent = randomCategory;
+    } else {
+        console.error("Category name element not found");
+    }
+    
+    displayCategoryProducts(randomCategory);
 });
+
+// Funzione per ottenere una categoria casuale
+function getRandomCategory() {
+    const categories = [...new Set(products.map(p => p.category))];
+    const randomCategory = categories[Math.floor(Math.random() * categories.length)];
+    console.log("Available categories: ", categories);
+    return randomCategory;
+}
+
+// Mostra prodotti di una categoria casuale in uno scroll orizzontale
+function displayCategoryProducts(category) {
+    const productList = document.getElementById('category-products');
+    
+    if (productList) {
+        console.log("Category product list container found");
+
+        const categoryProducts = products.filter(product => product.category === category);
+        console.log("Products in category: ", categoryProducts);
+    
+        productList.innerHTML = ''; // Svuota l'elemento prima di riempirlo di nuovo
+    
+        categoryProducts.forEach(product => {
+            const productCard = document.createElement('div');
+            productCard.classList.add('product-card');
+            productCard.innerHTML = `
+                <img src="${product.image}" alt="${product.name}">
+                <h2>${product.name}</h2>
+                <p>$${product.price.toFixed(2)}</p>
+                <a href="product.html?id=${product.id}" class="view-details">View Details</a>
+            `;
+            productList.appendChild(productCard);
+        });
+    } else {
+        console.error("Category product list container not found");
+    }
+}

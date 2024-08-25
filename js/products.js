@@ -1,34 +1,32 @@
 const products = [
-    {
-        id: 1,
-        name: 'Black Speaker',
-        price: 50.00,
-        image: 'images/product1.jpg',
-        description: 'High-quality wireless speaker with deep bass and crystal-clear sound.',
-        features: ['Bluetooth connectivity', 'Long battery life', 'Compact design']
-    },
-    {
-        id: 2,
-        name: 'Portable Charger',
-        price: 35.00,
-        image: 'images/product2.jpg',
-        description: 'Portable charger with high capacity and fast charging capabilities.',
-        features: ['5000mAh capacity', 'USB-C and USB-A ports', 'Lightweight and durable']
-    },
-    {
-        id: 3,
-        name: 'Wireless Headphones',
-        price: 120.00,
-        image: 'images/product3.jpg',
-        description: 'Noise-cancelling wireless headphones with superior sound quality.',
-        features: ['Noise cancellation', '20 hours battery life', 'Comfortable fit']
-    },
-    {
-        id: 4,
-        name: 'Mouse',
-        price: 120.00,
-        image: 'images/product4.jpg',
-        description: 'Good Mouse',
-        features: ['12.000D DPI', '40', 'Comfortable fit']
-    }
+    { id: 1, name: 'Black Speaker', price: 50.00, image: 'images/product1.jpg', description: 'High-quality speaker.', category: 'Speakers' },
+    { id: 2, name: 'Portable Charger', price: 35.00, image: 'images/product2.jpg', description: 'Fast charging power bank.', category: 'Chargers' },
+    { id: 3, name: 'Wireless Headphones', price: 120.00, image: 'images/product3.jpg', description: 'Noise-cancelling headphones.', category: 'Headphones' },
+    { id: 4, name: 'Gaming Mouse', price: 60.00, image: 'images/product4.jpg', description: 'RGB gaming mouse.', category: 'Mice' },
+    { id: 5, name: 'Mechanical Keyboard', price: 150.00, image: 'images/product5.jpg', description: 'Mechanical keyboard with RGB lighting.', category: 'Keyboards' },
+    { id: 6, name: 'Smart Watch', price: 200.00, image: 'images/product6.jpg', description: 'Health monitoring smartwatch.', category: 'Wearables' },
+    { id: 7, name: '4K Monitor', price: 300.00, image: 'images/product7.jpg', description: 'Ultra HD monitor.', category: 'Monitors' },
+    { id: 8, name: 'Laptop Stand', price: 40.00, image: 'images/product8.jpg', description: 'Adjustable laptop stand.', category: 'Accessories' },
+    { id: 9, name: 'Bluetooth Speaker', price: 90.00, image: 'images/product9.jpg', description: 'Portable bluetooth speaker.', category: 'Speakers' },
+    { id: 10, name: 'USB-C Hub', price: 25.00, image: 'images/product10.jpg', description: 'Multi-port USB hub.', category: 'Chargers' },
+    { id: 11, name: 'Tablet Case', price: 20.00, image: 'images/product11.jpg', description: 'Durable tablet case.', category: 'Accessories' },
+    { id: 12, name: 'Webcam', price: 70.00, image: 'images/product12.jpg', description: 'HD webcam.', category: 'Accessories' },
+    { id: 13, name: 'VR Headset', price: 400.00, image: 'images/product13.jpg', description: 'Virtual reality headset.', category: 'Wearables' },
+    { id: 14, name: 'Wireless Mouse', price: 50.00, image: 'images/product14.jpg', description: 'Compact wireless mouse.', category: 'Mice' },
+    { id: 15, name: 'Gaming Headset', price: 120.00, image: 'images/product15.jpg', description: '7.1 surround sound gaming headset.', category: 'Headphones' },
+    { id: 16, name: 'HD Projector', price: 500.00, image: 'images/product16.jpg', description: '1080p projector.', category: 'Monitors' },
+    { id: 17, name: 'Tablet Stand', price: 30.00, image: 'images/product17.jpg', description: 'Adjustable tablet stand.', category: 'Accessories' },
+    { id: 18, name: 'Smart Home Hub', price: 250.00, image: 'images/product18.jpg', description: 'Smart home control center.', category: 'Smart Home' },
+    { id: 19, name: 'Wireless Charger', price: 45.00, image: 'images/product19.jpg', description: 'Fast wireless charger.', category: 'Chargers' },
+    { id: 20, name: 'Bluetooth Keyboard', price: 90.00, image: 'images/product20.jpg', description: 'Portable bluetooth keyboard.', category: 'Keyboards' },
+    { id: 21, name: 'Smart Light Bulbs', price: 80.00, image: 'images/product21.jpg', description: 'Voice-controlled light bulbs.', category: 'Smart Home' },
+    { id: 22, name: 'Ergonomic Chair', price: 400.00, image: 'images/product22.jpg', description: 'Ergonomic office chair.', category: 'Furniture' },
+    { id: 23, name: 'Gaming Desk', price: 300.00, image: 'images/product23.jpg', description: 'LED gaming desk.', category: 'Furniture' },
+    { id: 24, name: 'Noise Cancelling Earbuds', price: 150.00, image: 'images/product24.jpg', description: 'Wireless noise-cancelling earbuds.', category: 'Headphones' },
+    { id: 25, name: 'USB-C Cable', price: 15.00, image: 'images/product25.jpg', description: 'Durable USB-C cable.', category: 'Chargers' },
+    { id: 26, name: 'Bluetooth Speaker XL', price: 200.00, image: 'images/product26.jpg', description: 'Large portable bluetooth speaker.', category: 'Speakers' },
+    { id: 27, name: 'Portable SSD', price: 100.00, image: 'images/product27.jpg', description: 'High-speed portable SSD.', category: 'Storage' },
+    { id: 28, name: 'External Hard Drive', price: 80.00, image: 'images/product28.jpg', description: '2TB external hard drive.', category: 'Storage' },
+    { id: 29, name: '4K Streaming Device', price: 130.00, image: 'images/product29.jpg', description: '4K media streaming device.', category: 'Smart Home' },
+    { id: 30, name: 'Premium Keyboard', price: 150.00, image: 'images/product30.jpg', description: 'Premium mechanical keyboard.', category: 'Keyboards' }
 ];
