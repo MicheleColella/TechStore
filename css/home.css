@@ -149,10 +149,12 @@ body {
 .hero h1 {
     font-size: 48px;
     margin-bottom: 20px;
+    color: #333;
 }
 
 .hero p {
     font-size: 18px;
+    color: #333;
 }
 
 /* Product Section */

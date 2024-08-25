@@ -28,7 +28,7 @@ function displayCategoryProducts(category) {
             const productCard = document.createElement('div');
             productCard.classList.add('product-card');
             productCard.innerHTML = `
-                <img src="${product.image}" alt="${product.name}">
+                <img src="${product.image}">
                 <h2>${product.name}</h2>
                 <p>$${product.price.toFixed(2)}</p>
                 <a href="product.html?id=${product.id}" class="view-details">View Details</a>
@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const productCard = document.createElement('div');
             productCard.classList.add('product-card');
             productCard.innerHTML = `
-                <img src="${product.image}" alt="${product.name}">
+                <img src="${product.image}">
                 <h2>${product.name}</h2>
                 <p>$${product.price.toFixed(2)}</p>
                 <a href="product.html?id=${product.id}" class="view-details">View Details</a>
