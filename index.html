@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Minimal Store</title>
+    <link rel="stylesheet" href="css/home.css">
+</head>
+<body> 
+    <!-- Header / Navbar -->
+    <header class="navbar sticky">
+        <div class="logo">Me•TS300</div>
+        <nav class="nav-links">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Categories</a></li>
+                <li><a href="#">Best Sellers</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Cart</a></li>
+            </ul>
+        </nav>
+        <div class="menu-toggle" id="mobile-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Wireless Gadgets</h1>
+        <p>Discover our premium selection of wireless gadgets, designed to elevate your experience.</p>
+    </section>
+
+    <!-- Product Section -->
+    <section class="products" id="product-list">
+        <!-- Prodotti saranno aggiunti dinamicamente da main.js -->
+    </section>
+
+    <!-- Category Products Section -->
+    <section class="category-products">
+        <h2>Products from Category: <span id="category-name"></span></h2>
+        <div id="category-products" class="scroll-view">
+            <!-- Prodotti della categoria verranno caricati dinamicamente -->
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 Minimal Store. All rights reserved.</p>
+    </footer>
+
+    <!-- Dropdown Menu -->
+    <div id="dropdown-menu" class="dropdown-menu">
+        <button id="close-menu" class="close-menu">X</button>
+        <nav class="dropdown-nav">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Categories</a></li>
+                <li><a href="#">Best Sellers</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Cart</a></li>
+            </ul>
+        </nav>
+        <div class="overlay"></div>
+    </div>
+
+    <script src="js/products.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
