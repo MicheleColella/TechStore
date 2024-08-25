@@ -27,17 +27,6 @@
         </div>
     </header>
 
-    <!-- Dropdown Menu -->
-    <div class="dropdown-menu" id="dropdown-menu">
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Categories</a></li>
-            <li><a href="#">Best Sellers</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">Cart</a></li>
-        </ul>
-    </div>
-
     <!-- Hero Section -->
     <section class="hero">
         <h1>Wireless Gadgets</h1>
@@ -49,6 +38,7 @@
         <!-- Prodotti saranno aggiunti dinamicamente da main.js -->
     </section>
 
+    <!-- Category Products Section -->
     <section class="category-products">
         <h2>Products from Category: <span id="category-name"></span></h2>
         <div id="category-products" class="scroll-view">
@@ -60,6 +50,21 @@
     <footer>
         <p>© 2024 Minimal Store. All rights reserved.</p>
     </footer>
+
+    <!-- Dropdown Menu -->
+    <div id="dropdown-menu" class="dropdown-menu">
+        <button id="close-menu" class="close-menu">X</button>
+        <nav class="dropdown-nav">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Categories</a></li>
+                <li><a href="#">Best Sellers</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Cart</a></li>
+            </ul>
+        </nav>
+        <div class="overlay"></div>
+    </div>
 
     <script src="js/products.js"></script>
     <script src="js/main.js"></script>
